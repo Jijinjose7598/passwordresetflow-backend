@@ -7,7 +7,7 @@ const server = express();
 
 server.use(
   cors({
-    origin: "*",
+    origin: "https://reset-pw-flow.netlify.app",
   })
 );
 
