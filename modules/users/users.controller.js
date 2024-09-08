@@ -184,7 +184,7 @@ UsersRouter.post("/verify-email", async (req, res) => {
       from: "jijinktr@gmail.com",
       to: user.email,
       subject: "Verify Your Email",
-      text: `Please verify your email by clicking the following link: https://reset-pw-flow.netlify.app/verify/${token}`,
+      text: `Please verify your email by clicking the following link: https://passwordresetflow-backend-pttf.onrender.com/verify/${token}`,
     };
       console.log(mailOptions);
 
@@ -226,7 +226,7 @@ UsersRouter.get("/verify/:token", async (req, res) => {
     return res.status(200).json({
       message:
         "Token verified successfully! Redirecting to password reset page",
-      redirectUrl: `https://reset-pw-flow.netlify.app/reset-password/${token}`, // Replace with your frontend URL
+      redirectUrl: `https://passwordresetflow-backend-pttf.onrender.com/reset-password/${token}`, // Replace with your frontend URL
     });
   } catch (error) {
     // Handle errors (e.g., invalid token, expired token)
