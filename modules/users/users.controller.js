@@ -157,7 +157,7 @@ UsersRouter.delete("/delete/:userId", async (req, res) => {
 });
 
 // 6. Verify email and generate JWT token
-// http://localhost:3000/users/verify-email
+// http://localhost:4000/users/verify-email
 UsersRouter.post("/verify-email", async (req, res) => {
   const { email } = req.body;
 
@@ -184,7 +184,7 @@ UsersRouter.post("/verify-email", async (req, res) => {
       from: "jijinktr@gmail.com",
       to: user.email,
       subject: "Verify Your Email",
-      text: `Please verify your email by clicking the following link: https://reset-pw-flow.netlify.app/verify/${token}`,
+      text: `Please verify your email by clicking the following link:https://reset-pw-flow.netlify.app/verify/${token}`,
     };
       console.log(mailOptions);
 
